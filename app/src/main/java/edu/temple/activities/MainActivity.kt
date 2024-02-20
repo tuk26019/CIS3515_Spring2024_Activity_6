@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         with (findViewById<RecyclerView>(R.id.textSizeSelectorRecyclerView)) {
 
             // TODO Step 2: Implement lambda body to launch new activity and pass value
-            adapter = TextSizeAdapter(textSizes){textSizes->
+            adapter = TextSizeAdapter(textSizes){textSize->
                 val launchIntent = Intent(this@MainActivity, DisplayActivity::class.java)
-                launchIntent.putExtra("textsize",textSizes)
+                launchIntent.putExtra("textsize",textSize)
                 startActivity(launchIntent)
             }
             layoutManager = LinearLayoutManager(this@MainActivity)
